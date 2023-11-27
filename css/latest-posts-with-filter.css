@@ -1,0 +1,325 @@
+@charset "utf-8";
+/* CSS Document */
+.loading {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.loading.loaded {
+    opacity: 1;
+	
+}
+
+
+
+
+.card__cover {
+    position: relative;
+}
+
+.date-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.date-box .day {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 21px;
+}
+
+.date-box .date {
+    font-size: 12px;
+    color: #555;
+}
+
+.mask {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card__tag {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+
+.grid {
+    display: grid;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1260px;
+}
+
+.grid .full-width {
+    display: grid;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 99%;
+}
+
+
+
+/* fluid 5 columns */
+.grid-sizer, .grid-item { width: 30%; }
+/* 2 columns */
+.grid-item--width2 { width: 30%; }
+.grid-item--width3{ width: 30%; }
+
+
+/* Full-width grid styles */
+/* Full-width grid styles */
+.grid.full-width {
+    max-width: 99%;
+}
+
+/* fluid 5 columns */
+.grid.full-width .grid-item {
+    width: 16%;
+}
+
+/* 2 columns */
+.grid.full-width .grid-item--width2 {
+    width: 16%;
+}
+
+/* 3 columns */
+.grid.full-width .grid-item--width3 {
+    width: 16%;
+}
+
+
+
+img.mask {
+    width: 100%;
+}
+
+/* Grid Item Styles */
+.grid-item {
+    background: #fff;
+    /* border-radius: 8px; */
+    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+    transition: all 300ms ease;
+    font-family: inherit;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    transform-origin: center bottom; /* Set the transform origin to the bottom center */
+}
+
+/* Interesting Transition Effect */
+
+
+/* Filter Styles */
+.filter {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 14px;
+
+}
+
+.filter li {
+    display: inline-block;
+    margin: 0 5px 5px 0px;
+}
+
+.filter li a {
+    display: block;
+    padding: 4px 15px;
+    text-decoration: none;
+    border-radius: 0px;
+    background: #cccc;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter li a.active,
+.filter li a:hover {
+    background-color: #737373;
+    color: white;
+}
+
+/* Hover Effect */
+.filter li a:hover {
+    background-color: #737373;
+}
+
+
+
+
+.grid .card__image {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  display: block;
+
+  overflow: hidden;
+  position: relative;
+}
+.grid  .card__image > img {
+  display: block;
+  margin-bottom: 0;
+  width: 100%;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.grid  .card__image:hover > img {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.grid .card__title {
+    color: white;
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    text-decoration: none;
+
+}
+
+.grid  .card__overlay {
+  content: "";
+  bottom: 0;
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.grid .card__overlay--indigo {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+  z-index: 2;
+}
+
+.card__overlay--blue {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+  z-index: 2;
+}
+
+
+.card__overlay-content {
+  position: absolute;
+  bottom: 0;
+  padding: 1.5em;
+  z-index: 3;
+}
+
+.grid .card__meta {
+    margin: 0;
+    margin-right: -1em;
+    margin-bottom: 0.75em;
+    padding-left: 0;
+}
+.card__meta.card__meta--last {
+  margin-bottom: 0;
+}
+.card__meta li {
+  color: #f8f8f8;
+  display: inline;
+  list-style-type: none;
+  margin-bottom: 0;
+  padding-right: 1em;
+  font-size: 0.85em;
+  font-variant: small-caps;
+  letter-spacing: 1px;
+}
+
+.card__meta li > a {
+  color: #f8f8f8;
+}
+
+	
+
+	
+
+
+
+
+/* Media query for full width */
+@media screen and (max-width: 1200px) {
+   .grid.full-width {
+        width: 99%;
+    }
+.grid.full-width .grid-item { width: 30%;}
+.grid .card__title {
+
+    font-size: 19px !important;
+ 
+}
+}
+
+	/* Media query for screens with a maximum width of, for example, 767 pixels (typical for mobile devices) */
+@media (max-width: 668px) {
+
+.grid.full-width .grid-item { width: 100%;}
+
+
+
+.grid-sizer,
+.grid-item { width: 100%; }
+
+.grid-item--width2 { width: 100%; }
+.grid-item--width3{ width: 100%; }
+.card__cover.card__cover--one img {
+    width: 100%;
+}
+
+.grid {
+    width: 99%;
+    margin: 0 auto;
+}
+ul.filter {
+    font-size: 11px;
+
+    text-align: center;
+
+}
+.filter li {
+
+    margin-bottom: 5px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
